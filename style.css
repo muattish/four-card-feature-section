@@ -16,14 +16,24 @@
 }
 
 body {
-   
+
     height: 100vh;
     background-color: var(--Very-Light-Gray);
     font-family: 'Poppins', sans-serif;
     font-size: 0.94em;
 }
 
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
 @media only screen and (max-width : 375px) {
+
     /* Styles here */
     .container {
         max-width: 375px;
