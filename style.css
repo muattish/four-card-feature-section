@@ -37,5 +37,40 @@ body {
     /* Styles here */
     .container {
         max-width: 375px;
+        display: table-row !important;
+
     }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Supervisor team-karma calcu";
+}
+
+.Supervisor {
+    grid-area: Supervisor;
+    padding-top: 5rem;
+    padding-right: 30px;
+
+}
+
+.team-karma {
+    grid-area: team-karma;
+}
+
+.calcu {
+    grid-area: calcu;
+    padding-top: 5rem;
+    padding-left: 30px;
+}
+.team {
+    margin-bottom: 30px !important;
+}
+.karma {
+    margin-bottom: 30px;
 }
