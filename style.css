@@ -4,7 +4,7 @@
     --Red: hsl(0, 78%, 62%);
     --Cyan: hsl(180, 62%, 55%);
     --Orange: hsl(34, 97%, 64%);
-    --Blue: hsl(212, 86%, 64%);
+    --Blue: rgb(84, 158, 242);
 
     /*  Neutral */
 
@@ -16,7 +16,9 @@
 }
 
 body {
-
+    
+    margin: 0;
+    padding: 0;
     height: 100vh;
     background-color: var(--Very-Light-Gray);
     font-family: 'Poppins', sans-serif;
@@ -32,13 +34,28 @@ body {
     color: hsl(228, 45%, 44%);
 }
 
-@media only screen and (max-width : 375px) {
+@media (max-width : 425px) {
 
     /* Styles here */
     .container {
-        max-width: 375px;
-        display: table-row !important;
-
+        width: 375px;
+        display: revert !important;
+    }
+    .col-12 {
+        margin-top: 6rem;
+        padding: 2.5rem !important;
+    }
+    .supervisor {
+        padding: 1rem !important;
+    }
+    .calculator {
+        padding: 1rem !important;
+    }
+    .team-karma {
+        padding: 1rem !important;
+    }
+    .card {
+        width: 310px !important;
     }
 }
 
@@ -49,11 +66,11 @@ body {
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-        "Supervisor team-karma calcu";
+        "supervisor team-karma calculator";
 }
 
-.Supervisor {
-    grid-area: Supervisor;
+.supervisor {
+    grid-area: supervisor;
     padding-top: 5rem;
     padding-right: 30px;
 
@@ -63,8 +80,8 @@ body {
     grid-area: team-karma;
 }
 
-.calcu {
-    grid-area: calcu;
+.calculator {
+    grid-area: calculator;
     padding-top: 5rem;
     padding-left: 30px;
 }
@@ -73,4 +90,11 @@ body {
 }
 .karma {
     margin-bottom: 30px;
+}
+.card {
+    width: 350px;
+height: 250px;
+background: hsl(0, 0%, 100%);
+box-shadow: 0px 4px 20px #DBE5F1;
+border: none;
 }
