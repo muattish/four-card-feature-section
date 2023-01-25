@@ -25,8 +25,10 @@ body {
     font-size: 0.94em;
 }
 h1,h2,h3,h4 {
-    padding: 1.25rem;
-    margin: 0;
+    color: var(--VeryDarkBlue);
+    padding: 0.88rem;
+    margin: 0px;
+    padding-top: 0;
 }
 .attribution {
     font-size: 11px;
@@ -36,25 +38,49 @@ h1,h2,h3,h4 {
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
-
+@media (min-width : 768px) {
+    .container {
+        display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 30px 30px;
+    grid-auto-flow: row;
+    grid-template-areas: "supervisor team-karma calculator";
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    }
+}
 @media (max-width : 425px) {
 
     /* Styles here */
     .container {
-        width: 375px;
-        display: revert !important;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 !important;
+        justify-items: center;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+}
+
+.supervisor {
+    padding: 1rem !important;
+}
+.calculator {
+    padding: 1rem !important;
+    padding-top: 0 !important;
+}
     }
     .col-12 {
         margin-top: 5rem;
     }
-    .supervisor {
-        padding: 1rem !important;
-    }
-    .calculator {
-        padding: 1rem !important;
-    }
     .team-karma {
         padding: 1rem !important;
+    }
+    .karma {
+        margin-bottom: 0;
     }
     .card {
         width: 310px !important;
@@ -69,9 +95,6 @@ h1,h2,h3,h4 {
     }
 }
 
-.col-12 {
-    
-}
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -87,19 +110,15 @@ h1,h2,h3,h4 {
 
 .supervisor {
     grid-area: supervisor;
-    padding-top: 5rem;
-    
-    
-
+    padding-left: 80px;
 }
-
-.team-karma {
-    grid-area: team-karma;
-}
-
 .calculator {
     grid-area: calculator;
-    padding-top: 5rem;
+    padding-right: 80px;
+    
+}
+.team-karma {
+    grid-area: team-karma;
 }
 .team {
     margin-bottom: 30px !important;
@@ -130,4 +149,7 @@ border: none;
 }
 .team-karma .karma {
     border-top: 5px solid var(--Orange);
+}
+.rounded img {
+    padding-top: 28px;
 }
