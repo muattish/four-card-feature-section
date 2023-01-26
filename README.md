@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/muattish/four-card-feature-section.git](https://github.com/muattish/four-card-feature-section.git)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://muattish.github.io/four-card-feature-section/](https://muattish.github.io/four-card-feature-section/)
 
 ### Built with
 
