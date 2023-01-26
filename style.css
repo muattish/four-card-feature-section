@@ -38,12 +38,19 @@ h1,h2,h3,h4 {
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
-@media (min-width : 1024px) {
+
+@media (min-width: 1400px){
+.container {
+    max-width: 1140px !important;
+}
+}
+
+@media (min-width : 992px) {
     .container {
         display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 30px 30px;
+    
     grid-auto-flow: row;
     grid-template-areas: "supervisor team-karma calculator";
     justify-items: center;
@@ -51,8 +58,11 @@ h1,h2,h3,h4 {
     justify-content: center;
     align-items: center;
     }
+    .card {
+        width: 350px !important;
+    }
 }
-@media (max-width : 768px) {
+@media (max-width : 768px)  {
 
     /* Styles here */
     .container {
@@ -62,8 +72,25 @@ h1,h2,h3,h4 {
         justify-items: center;
         align-content: center;
         justify-content: center;
-        align-items: center;
-} }
+        align-items: center; 
+    } 
+        .card {
+            width: 310px !important;
+        }
+        h1,h2,h3,h4 {
+            font-size: 22px;
+            margin: 0;
+            padding: 0.88rem;
+        }
+        h4 {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+}
+@media (min-width: 768px){
+.container {
+    max-width: 375px;
+}}
 .supervisor {
     padding: 1rem !important;
 }
@@ -73,7 +100,7 @@ h1,h2,h3,h4 {
 }
 
 .col-12 {
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 .team-karma {
     padding: 1rem !important;
@@ -81,17 +108,8 @@ h1,h2,h3,h4 {
 .karma {
     margin-bottom: 0;
 }
-.card {
-    width: 310px !important;
-}
-h1,h2,h3,h4 {
-    margin: 0;
-    padding: 0.88rem;
-}
-h4 {
-    font-size: 14px;
-    line-height: 1.5;
-}
+
+
 
 .supervisor {
     grid-area: supervisor;
@@ -137,4 +155,7 @@ border: none;
 }
 .rounded img {
     padding-top: 28px;
+}
+.card-text {
+    color: var(--Grayish-Blue);
 }
