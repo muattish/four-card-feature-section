@@ -42,6 +42,8 @@ h4 {
 }
 
 .attribution {
+    padding: 2rem;
+    margin: 1rem;
     font-size: 11px;
     text-align: center;
 }
@@ -163,13 +165,17 @@ h4 {
     width: 350px;
     height: 250px;
     background: hsl(0, 0%, 100%);
-    box-shadow: 0px 4px 20px 2px #dbe5f1;
+    box-shadow: 0px 4px 20px 0px #dbe5f1;
     border: none;
+}
+.card-body {
+    padding-top: 0;
 }
 
 .card-header {
     background-color: transparent;
     border-bottom: none !important;
+    padding-top: 37px;
 }
 
 .supervisor .card {
@@ -189,7 +195,8 @@ h4 {
 }
 
 .rounded img {
-    padding-top: 28px;
+    padding-top: 20px;
+    padding-right: 20px;
 }
 
 .card-text {
